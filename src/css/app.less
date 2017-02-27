@@ -1,0 +1,195 @@
+@import 'reset';
+@import 'variables';
+
+body {
+  font-family: Avenir, Helvetica, sans-serif;
+  background-color: rgb(230, 231, 232);
+}
+
+h2 {
+  font-size: 24px;
+}
+h3 {
+  margin-bottom: 15px;
+  font-size: 18px;
+  font-weight: bold;
+}
+p {
+  margin-bottom: 10px;
+}
+
+/* Form elements */
+fieldset {
+  margin-bottom: 30px;
+}
+label {
+  display: block;
+  margin-bottom: 3px;
+  font: 16px "Avenir Next Condensed", Avenir, Helvetica, sans-serif;
+  color: rgb(50, 50, 50);
+}
+input,
+textarea {
+  margin-bottom: 10px;
+  width: 100%;
+  height: 34px;
+  padding: 0 10px;
+  font-size: 16px;
+  background-color: rgb(244, 244, 244);
+  border-radius: 3px;
+  box-shadow: inset 0 0 1px rgb(198, 198, 198);
+  border: 0;
+  outline: 0;
+}
+textarea {
+  width: 100%;
+  height: 80px;
+  padding: 10px;
+}
+input:focus,
+textarea:focus {
+  box-shadow: inset 0 0 1px rgb(118, 118, 118);
+}
+input[type="submit"],
+button {
+  width: 115px;
+  height: 40px;
+  padding: 6px 12px;
+  background: rgb(38, 171, 226);
+  font: 16px Avenir, Helvetica, sans-serif;
+  color: #fff;
+  cursor: pointer;
+  border: 0;
+  border-radius: 3px;
+  outline: none;
+}
+input[type="submit"]:hover,
+button:hover {
+  background: rgb(28, 161, 216);
+}
+input[type="submit"]:active,
+button:active {
+  background: rgb(8, 141, 196);
+}
+
+.wizard {
+  width: 700px;
+  margin: 0 auto;
+  padding: 25px 0;
+  .steps {
+    display: flex;
+    justify-content: space-between;
+    .step {
+      position: relative;
+      width: 80px;
+      height: 80px;
+      line-height: 80px;
+      z-index: 1;
+      text-align: center;
+      font-size: 38px;
+      color: #fff;
+      background-color: gray;
+      border-radius: 80px;
+      &::before {
+        content: '';
+        position: absolute;
+        top: 35px;
+        left: 79px;
+        height: 10px;
+        width: 129px;
+        z-index: -1;
+        background-color: gray;
+      }
+      &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 80px;
+        height: 80px;
+        z-index: -1;
+        opacity: 0;
+        border-radius: 80px;
+        background-color: rgb(39, 171, 226);
+        transition: opacity .25s;
+      }
+      &:last-child::before {
+        content: none;
+      }
+      &.active::after {
+        opacity: 1;
+      }
+    }
+  }
+
+  .pages {
+    margin-top: 25px;
+    padding: 30px;
+    background: #fff;
+    border-radius: 3px;
+    box-shadow: inset 0 0 3px rgb(168, 168, 168);
+    .step:not(.active) {
+      display: none;
+    }
+    .page-header {
+      margin-bottom: 30px;
+      padding-bottom: 25px;
+      border-bottom: 1px solid rgb(200, 201, 202);
+    }
+    .page-body {
+      .fieldgroup {
+        height: 69px;
+      }
+      .field {
+        float: left;
+        width: 50%;
+        padding-right: 40px;
+        box-sizing: border-box;
+        &:last-child {
+          margin-right: 0;
+        }
+        &.textarea {
+          width: 100%;
+        }
+        &.state {
+          width: 85px;
+        }
+        &.zip {
+          width: 140px;
+        }
+      }
+    }
+  }
+
+  .confirmation {
+    display: flex;
+    span {
+      display: block;
+      font-size: 14px;
+      color: rgb(150, 150, 150);
+    }
+    .column {
+      width: 33%;
+    }
+    .submit-wrapper {
+      margin-top: 20px;
+      text-align: center;
+    }
+  }
+}
+
+
+/* Controls */
+.wizard .controls {
+  overflow: hidden;
+  padding-top: 25px;
+  .control {
+    width: 115px;
+    &#next {
+      float: right;
+    }
+    &:not(.active) {
+      display: none;
+    }
+  }
+}

@@ -1,0 +1,252 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+
+    <title>Wizard</title>
+    <link rel="stylesheet" href="build/app.min.css">
+  </head>
+
+  <body>
+    <div class="wizard">
+      <div class="steps">
+        <div class="step step1 active">
+          <span>1</span>
+        </div>
+        <div class="step step2">
+          <span>2</span>
+        </div>
+        <div class="step step3">
+          <span>3</span>
+        </div>
+        <div class="step step4">
+          <span>4</span>
+        </div>
+      </div>
+
+      <div class="pages">
+        <div class="step step1 active">
+          <h2 class="page-header">Personal Information</h2>
+
+          <div class="page-body">
+            <fieldset>
+              <div class="fieldgroup">
+                <div class="field">
+                  <label for="first_name">First Name</label>
+                  <input type="text" id="first_name" data-label="First Name">
+                </div>
+
+                <div class="field">
+                  <label for="last_name">Last Name</label>
+                  <input type="text" id="last_name" data-label="Last Name">
+                </div>
+              </div>
+            </fieldset>
+
+            <fieldset>
+              <div class="fieldgroup">
+                <div class="field">
+                  <label for="address_1">Address 1</label>
+                  <input type="text" id="address_1" data-label="Address 1">
+                </div>
+                <div class="field">
+                  <label for="address_2">Address 2</label>
+                  <input type="text" id="address_2" data-label="Address 2">
+                </div>
+              </div>
+
+              <div class="fieldgroup">
+                <div class="field">
+                  <label for="city">City</label>
+                  <input type="text" id="city" data-label="City">
+                </div>
+                <div class="field state">
+                  <label for="state">State</label>
+                  <input type="text" id="state" data-label="State">
+                </div>
+                <div class="field zip">
+                  <label for="zip">ZIP</label>
+                  <input type="number" id="zip" data-label="ZIP">
+                </div>
+              </div>
+            </fieldset>
+
+            <fieldset>
+              <div class="fieldgroup">
+                <div class="field">
+                  <label for="home_phone">Home Phone</label>
+                  <input type="tel" id="home_phone" data-label="Home Phone">
+                </div>
+
+                <div class="field">
+                  <label for="mobile_phone">Mobile Phone</label>
+                  <input type="tel" id="mobile_phone" data-label="Mobile Phone">
+                </div>
+              </div>
+
+              <div class="fieldgroup">
+                <div class="field">
+                  <label for="email">Email</label>
+                  <input type="email" id="email" data-label="Email">
+                </div>
+              </div>
+            </fieldset>
+          </div>
+        </div>
+
+        <div class="step step2">
+          <h2 class="page-header">References</h2>
+
+          <div class="page-body">
+            <fieldset>
+              <h3 class="fieldset-title">Reference 1</h3>
+
+              <div class="fieldgroup">
+                <div class="field">
+                  <label for="ref1_name">Name</label>
+                  <input type="text" id="ref1_name" data-label="Reference 1 Name">
+                </div>
+              </div>
+
+              <div class="fieldgroup">
+                <div class="field">
+                  <label for="ref1_email">Email</label>
+                  <input type="email" id="ref1_email" data-label="Reference 1 Email">
+                </div>
+                <div class="field">
+                  <label for="ref1_phone">Phone</label>
+                  <input type="tel" id="ref1_phone" data-label="Reference 1 Phone">
+                </div>
+              </div>
+            </fieldset>
+
+            <fieldset>
+              <h3 class="fieldset-title">Reference 2</h3>
+
+              <div class="fieldgroup">
+                <div class="field">
+                  <label for="ref2_name">Name</label>
+                  <input type="text" id="ref2_name" data-label="Reference 2 Name">
+                </div>
+              </div>
+
+              <div class="fieldgroup">
+                <div class="field">
+                  <label for="ref2_email">Email</label>
+                  <input type="email" id="ref2_email" data-label="Reference 2 Email">
+                </div>
+                <div class="field">
+                  <label for="ref2_phone">Phone</label>
+                  <input type="tel" id="ref2_phone" data-label="Reference 2 Phone">
+                </div>
+              </div>
+            </fieldset>
+
+            <fieldset>
+              <h3 class="fieldset-title">Reference 3</h3>
+
+              <div class="fieldgroup">
+                <div class="field">
+                  <label for="ref3_name">Name</label>
+                  <input type="text" id="ref3_name" data-label="Reference 3 Name">
+                </div>
+              </div>
+
+              <div class="fieldgroup">
+                <div class="field">
+                  <label for="ref3_email">Email</label>
+                  <input type="email" id="ref3_email" data-label="Reference 3 Email">
+                </div>
+                <div class="field">
+                  <label for="ref3_phone">Phone</label>
+                  <input type="tel" id="ref3_phone" data-label="Reference 3 Phone">
+                </div>
+              </div>
+            </fieldset>
+          </div>
+        </div>
+
+        <div class="step step3">
+          <h2 class="page-header">More Information</h2>
+
+          <div class="page-body">
+            <fieldset>
+              <div class="fieldgroup">
+                <div class="field">
+                  <label for="current_employer">Current Employer</label>
+                  <input type="text" id="current_employer" data-label="Current Employer">
+                </div>
+                <div class="field">
+                  <label for="title">Title</label>
+                  <input type="text" id="title" data-label="Title">
+                </div>
+              </div>
+            </fieldset>
+
+            <fieldset>
+              <div class="field textarea">
+                <label for="education">Education</label>
+                <textarea id="education" data-label="Education"></textarea>
+              </div>
+            </fieldset>
+
+            <fieldset>
+              <div class="fieldgroup">
+                <div class="field">
+                  <label for="linkedin">LinkedIn</label>
+                  <input type="text" id="linkedin" data-label="LinkedIn">
+                </div>
+                <div class="field">
+                  <label for="twitter">Twitter</label>
+                  <input type="text" id="twitter" data-label="Twitter">
+                </div>
+              </div>
+            </fieldset>
+
+            <fieldset>
+              <div class="fieldgroup">
+                <div class="field">
+                  <label for="hobbies">Hobbies</label>
+                  <input type="text" id="hobbies" data-label="Hobbies">
+                </div>
+              </div>
+            </fieldset>
+          </div>
+        </div>
+
+        <div class="step step4">
+          <h2 class="page-header">Confirmation</h2>
+
+          <div class="page-body">
+            <div class="confirmation">
+              <div class="column personal">
+                <h3>Personal Information</h3>
+                <div class="data"></div>
+              </div>
+              <div class="column references">
+                <h3>References</h3>
+                <div class="data"></div>
+              </div>
+              <div class="column more">
+                <h3>More Information</h3>
+                <div class="data"></div>
+              </div>
+            </div>
+
+            <div class="submit-wrapper">
+              <input type="submit" value="Submit">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="controls">
+        <button class="control" id="prev">Previous</button>
+        <button class="control active" id="next">Next</button>
+      </div>
+    </div>
+
+    <script src="build/app.min.js"></script>
+  </body>
+</html>
